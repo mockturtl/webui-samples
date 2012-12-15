@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2012, the Dart project authors.  Please see the AUTHORS file
+for details. All rights reserved. Use of this source code is governed by a
+BSD-style license that can be found in the LICENSE file.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+</head>
+<body>
+  <input type="checkbox" bind-checked="show">Show phones
+  <br>
+  <table class="table">
+  <thead>
+    <tr>
+    <td>Last</td><td>First</td>
+    <td template if="show">Phone</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bracha</td>
+      <td>Gilad</td>
+      <td template if="show">555-555-5555</td>
+    </tr>
+    <tr>
+      <td>Bak</td>
+      <td>Lars</td>
+      <td template if="show">222-222-2222</td>
+    </tr>
+    <tr>
+      <td>Ladd</td>
+      <td>Seth</td>
+      <td template if="show">111-222-3333</td>
+    </tr>
+  </tbody></table>
+  <script type="application/dart" src="table-if.dart"></script>
+</body>
+</html>

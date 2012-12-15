@@ -1,0 +1,3 @@
+bool show = true;
+
+main() {}
