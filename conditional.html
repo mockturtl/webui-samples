@@ -12,13 +12,13 @@ BSD-style license that can be found in the LICENSE file.
 </head>
 <body>
   <div class="well">
-    <div> Input1: <input type="text" bind-value="str1" placeholder="x"></div>
-    <div> Input2: <input type="text" bind-value="str2" placeholder="x"></div>
+    <div> Input1: <input type="text" bind-value="str1" placeholder="type something"></div>
+    <div> Input2: <input type="text" bind-value="str2" placeholder="do we match?"></div>
     <template if="str1 == str2">
       <div>They match!</div>
     </template>
-    <div template if='str1 != ""'>
-      {{str1}} is long!
+    <div template if='str1.length > 2'>
+      "{{str1}}" is getting long!
     </div>
   </div>
   <script type="application/dart" src="src/conditional.dart"></script>

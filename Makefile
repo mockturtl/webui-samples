@@ -9,7 +9,7 @@ views=views/
 
 default: fix
 	
-.PHONY: default clean all check
+.PHONY: default clean all check fix
 
 all: $(files)
 
@@ -21,10 +21,11 @@ all: $(files)
 	@dart2js $(target)$<$(build_ext) -o$(target)$<$(build_ext).js
 
 check:
-	@grep -nrq --color=auto import $(target)/*$(ext)
+	@echo "\nFixing generated imports...\n"
+	grep -nr --color=auto import $(target)*$(ext)
 
 fix: all check
-	@sed -i -r s%import\ \'%import\ \'$(src)% $(target)/*$(ext)
+	sed -i -r s!import\ \'!import\ \'$(src)! $(target)*$(ext)
 
 clean:
 	@-rm -rf $(target)
