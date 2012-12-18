@@ -4,8 +4,7 @@ target=target/
 ext=_bootstrap.dart
 build_ext=.html$(ext)
 cmd=web_ui/dwc.dart
-files=hello binding watcher conditional table-if loops tictac events
-views=views/
+files=hello binding watcher conditional tableif loops tictac events
 
 default: fix
 	
