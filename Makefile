@@ -4,7 +4,16 @@ target=target/
 ext=_bootstrap.dart
 build_ext=.html$(ext)
 cmd=web_ui/dwc.dart
-files=hello binding watcher conditional tableif loops tictac events
+files=hello \
+			binding \
+			watcher \
+			conditional \
+			tableif \
+			loops \
+			tictac \
+			events \
+			countcomponent \
+			redbox
 
 default: fix
 	
