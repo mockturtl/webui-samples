@@ -24,7 +24,7 @@ files=hello \
 
 default: shim
 	
-.PHONY: all clean localclean check fix test 2js
+.PHONY: all clean localclean check fix test 2js shim
 
 all: $(files)
 
