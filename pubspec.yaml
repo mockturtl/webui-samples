@@ -1,3 +1,4 @@
 name: webui-samples
 dependencies:
   web_ui: any
+  browser: any
