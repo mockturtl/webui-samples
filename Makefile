@@ -22,7 +22,7 @@ files=hello \
 	countcomponent \
 	redbox
 
-default: fix
+default: shim
 	
 .PHONY: all clean localclean check fix test 2js
 
@@ -45,6 +45,11 @@ redbox: redbox.html redboxelement.html
 		file=$(out)/$$file$(gen_ext) ; \
 		$(dart2js) $$file -o$$file.js ; \
 	done
+
+# dart script moved to pub, but dwc still uses googlecode.com
+# http://news.dartlang.org/2013/01/big-breaking-change-dartjs-bootstrap-file-moving-to-pub.html
+shim: fix
+	@sed -ri -e 's!https.*dart.js!packages/browser/dart\.js!' target/*.html
 
 check:
 	@echo "\nWill fix generated imports:\n"
