@@ -11,13 +11,10 @@ List<String> fruits = const [ 'Apple', 'Apricot', 'Avocado',
     'Tangerine', 'Tomato', 'Watermelon'];
 
 List<String> get results {
-  List<String> res = fruits.filter(
-      (v) => v.toLowerCase().contains(query.toLowerCase()));
-  if (res.length > 20) {
-    res.length = 20;
-    res.add('... and many more');
-  }
-  return res;
+  var lQuery = query.toLowerCase();
+  var res = fruits.where((v) => v.toLowerCase().contains(lQuery));
+  return (res.length <= 20) ? res.toList()
+    : (res.take(20).toList()..add('...and many more'));
 }
 
 bool get noMatches => results.isEmpty;
