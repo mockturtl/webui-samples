@@ -5,7 +5,7 @@ int count;
 
 main() {
   count = 0;
-  new Timer.repeating(const Duration(seconds: 1), (timer) {
+  new Timer.periodic(const Duration(seconds: 1), (timer) {
     count++;
     watchers.dispatch();
   });
