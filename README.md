@@ -9,5 +9,5 @@ usage
 ```sh
 $ pub install
 $ make
-$ dartium target/*.html
+$ make test
 ```
